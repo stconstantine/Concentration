@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBAction func touchCard(_ sender: UIButton) {
+        flipCard(withEmodji: "👻", on: sender)
     }
-
-
+    
+    @IBAction func touchSecondCard(_ sender: UIButton) {
+        flipCard(withEmodji: "🎃", on: sender)
+    }
+    
+    func flipCard(withEmodji emoji: String, on button: UIButton) {
+        print ("flipCard(withEmodji: \(emoji))")
+        if button.currentTitle == emoji {
+            button.setTitle("", for: .normal)
+            button.backgroundColor = .systemOrange
+        } else {
+            button.setTitle(emoji, for: .normal)
+            button.backgroundColor = .systemBackground
+        }
+    }
 }
 
