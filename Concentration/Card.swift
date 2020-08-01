@@ -10,8 +10,8 @@ import Foundation
 
 struct Card: Hashable {
     
-//    var hash: Int {return identifier}
-
+    func hash(into hasher: inout Hasher) {hasher.combine(identifier)}
+    
     static func ==(lhs: Card, rhs: Card) -> Bool {
         return lhs.identifier == rhs.identifier
     }
