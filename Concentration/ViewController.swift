@@ -49,7 +49,6 @@ class ViewController: UIViewController {
         }
         
     }
-    //TODO: fix the bug — when cards are matched, other emojis are shown
     
     private func updateViewFromModel() {
         for index in cardButtons.indices {
